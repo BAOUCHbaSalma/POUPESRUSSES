@@ -39,6 +39,15 @@ public class PoupeeRusse implements Poupee {
 
     @Override
     public void ouvrir() {
+        if (this.ouverte) {
+            System.out.println("Cette poupee est deja ouverte !!");
+
+        } else {
+            setOuverte(true);
+            System.out.println("Cette poupee sera ouverte maintenant !!");
+
+        }
+
 
     }
 
@@ -54,6 +63,6 @@ public class PoupeeRusse implements Poupee {
 
     @Override
     public void sortirDe(PoupeeRusse p) {
-        
+
     }
 }
