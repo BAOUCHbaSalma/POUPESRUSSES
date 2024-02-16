@@ -54,6 +54,13 @@ public class PoupeeRusse implements Poupee {
     @Override
     public void fermer() {
 
+        if (!ouverte) {
+            System.out.println("Cette poupee est deja fermer !!");
+        } else {
+            setOuverte(false);
+            System.out.println("Cette poupee sera fermer maintenant");
+        }
+
     }
 
     @Override
