@@ -45,18 +45,112 @@ class Menu {
             Choix=new Scanner(System.in).nextInt();
             switch (Choix) {
                 case 1:
+                    System.out.println("Entrez le numero de la poupee que voullez vous ouvrir (Poupee 1 , 2 ou 3)");
+                    int choix = new Scanner(System.in).nextInt();
+                    switch(choix){
+                        case 1 :
+                            doll1.ouvrir();
+
+                            break;
+                        case 2:
+
+                            doll2.ouvrir();
+                            break;
+                        case 3:
+                            doll3.ouvrir();
+                            break;
+                        default:
+                            System.out.println("Choix invalide !!");
+
+                    }
+
+
 
                     break;
                 case 2:
-                    
-                    break;
+                    System.out.println("Entrez le numero de la poupee que voullez vous fermer (Poupee 1 , 2 ou 3)");
+                    int Resultat = new Scanner(System.in).nextInt();
+                    switch(Resultat){
+                        case 1 :
+                            doll1.fermer();
+
+                            break;
+                        case 2:
+
+                            doll2.fermer();
+                            break;
+                        case 3:
+                            doll3.fermer();
+                            break;
+                        default:
+                            System.out.println("Choix invalide !!");
+
+                    }
+
+
 
                 case 3:
-
+                    System.out.println("1--> 1 dans 2");
+                    System.out.println("2--> 1 dans 3");
+                    System.out.println("3--> 2 dans 1");
+                    System.out.println("4--> 2 dans 3");
+                    System.out.println("5--> 3 dans 1");
+                    System.out.println("6--> 3 dans 2");
+                    System.out.println("Entrer votre choix: ");
+                    int ch=new Scanner(System.in).nextInt();
+                    switch (ch){
+                        case 1:
+                            doll1.placerDans(doll2);
+                            break;
+                        case 2:
+                            doll1.placerDans(doll3);
+                            break;
+                        case 3:
+                            doll2.placerDans(doll1);
+                            break;
+                        case 4:
+                            doll2.placerDans(doll3);
+                            break;
+                        case 5:
+                            doll3.placerDans(doll1);
+                            break;
+                        case 6:
+                            doll3.placerDans(doll2);
+                            break;
+                        default:
+                            System.out.println("Choix invalide");
+                            break;
+                    }
                     break;
 
                 case 4:
-
+                    System.out.println("1--> 1 de 2");
+                    System.out.println("2--> 1 de 3");
+                    System.out.println("3--> 2 de 1");
+                    System.out.println("4--> 2 de 3");
+                    System.out.println("5--> 3 de 1");
+                    System.out.println("6--> 3 de 2");
+                    int Res=new Scanner(System.in).nextInt();
+                    switch (Res){
+                        case 1:
+                            doll1.sortirDe(doll2);
+                            break;
+                        case 2:
+                            doll1.sortirDe(doll3);
+                            break;
+                        case 3:
+                            doll2.sortirDe(doll1);
+                            break;
+                        case 4:
+                            doll2.sortirDe(doll3);
+                            break;
+                        case 5:
+                            doll3.sortirDe(doll1);
+                            break;
+                        case 6:
+                            doll3.sortirDe(doll2);
+                            break;
+                    }
                     break;
                 case 5:
                     System.out.println("Fin!!!");
