@@ -50,7 +50,6 @@ public class PoupeeRusse implements Poupee {
 
 
     }
-
     @Override
     public void fermer() {
 
@@ -65,11 +64,36 @@ public class PoupeeRusse implements Poupee {
 
     @Override
     public void placerDans(PoupeeRusse p) {
+        if(ouverte &&this.Doll==null&&this.getTaille() < (p).getTaille()){
+
+            this.Doll=p;
+            System.out.println("la poupee placer avec succes Dans l' autre poupee");
+
+        }else{
+            System.out.println("l'operation a echouer");
+        }
+
 
     }
 
     @Override
     public void sortirDe(PoupeeRusse p) {
+        if(ouverte && Doll!=null){
+
+            System.out.println("la poupee sortir avec succes");
+            this.Doll=null;
+
+        }else{
+            System.out.println("l'operation a echouer");
+        }
 
     }
 }
+
+
+
+
+
+
+
+
